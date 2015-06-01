@@ -7,7 +7,6 @@ class WelcomeController < ApplicationController
     news_node_id = Node.where("content_producer = 'News' and ancestry = #{node_id}").first().id
     @news = News.where(node_id: news_node_id).order('id desc').limit(3)
     @setting = Setting.find_by_section_id(section_id)
-    @gallery = @setting.photomains.limit(3)
     render 'show'
   end
 
@@ -18,6 +17,5 @@ class WelcomeController < ApplicationController
     news_node_id = Node.where("content_producer = 'News' and ancestry = #{node_id}").first().id
     @news = News.where(node_id: news_node_id).order('id desc').limit(3)
     @setting = Setting.find_by_section_id(section.id)
-    @gallery = @setting.photomains.limit(3)
   end
 end

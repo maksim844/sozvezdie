@@ -9,7 +9,7 @@ RailsAdmin.config do |c|
 end
 
 RailsAdmin.config do |config|
-  config.included_models = ['News', 'Section', 'Node', 'Teacher', 'Setting', 'Album', 'Photo', 'Article']
+  config.included_models = ['News', 'Section', 'Node', 'Teacher', 'Setting', 'Album', 'Photo', 'Article', 'Photomain']
   config.actions do
     # root actions
     dashboard                     # mandatory
@@ -49,6 +49,11 @@ RailsAdmin.config do |config|
     field :photo#, :rich_picker
     field :comment
   end
+  config.model Photomain do
+    field :setting
+    field :name
+    field :image#, :rich_picker
+  end
 
   config.model Section do
     field :title
@@ -62,7 +67,9 @@ RailsAdmin.config do |config|
   end
 
   config.model Setting do
-    field :id
+    field :id do
+      read_only false
+    end
     field :section
     field :name
     field :adminEmail

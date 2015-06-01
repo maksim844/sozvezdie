@@ -16,6 +16,7 @@ ru:
       album: 'Альбомы'
       photo: 'Фотографии'
       article: 'Статьи'
+      photomain: 'Фото на главной'
     attributes:
       section:
         title: "Название"
@@ -104,6 +105,10 @@ ru:
         comment: 'Комментарий к фото'
         anons: 'Анонс'
         text: 'Текст'
+        image: 'Изображение'
+      photomain:
+        setting: 'Раздел настроек'
+        name: 'Название'
         image: 'Изображение'
   admin:
     form:

@@ -1,5 +1,6 @@
 class Photomain < ActiveRecord::Base
 
+  belongs_to :setting
   has_attached_file :image,
                     :styles => { :medium => "300x300>", :thumb => "200x200>" },
                     :default_url => "/images/:style/missing.png",

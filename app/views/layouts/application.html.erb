@@ -48,7 +48,7 @@
                 <div class="right right2">
                   <!--<h3>Фотогалерея</h3>-->
                   <div class="gallery">
-                    <% @gallery.each do |p|%>
+                    <% gallery(params[:section]).each do |p|%>
                         <%= image_tag p.image.url(:thumb) %>
                     <% end %>
                   </div>

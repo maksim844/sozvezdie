@@ -91,4 +91,9 @@ module ApplicationHelper
   def section_name(section)
     Section.find_by_uri(section).title
   end
+
+  def gallery(section)
+    section_id = Section.find_by_uri(section).id
+    return Photomain.where(setting_id: section_id)
+  end
 end
