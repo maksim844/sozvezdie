@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-deploy_to  = "/var/www/dummy_app/"
+deploy_to  = "/var/www/dummy_app"
 rails_root = "#{deploy_to}/current"
 pid_file   = "#{deploy_to}/shared/pids/unicorn.pid"
 socket_file= "#{deploy_to}/shared/unicorn.sock"
