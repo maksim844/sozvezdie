@@ -12,6 +12,7 @@ gem 'paperclip', '~> 2.4'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'dragonfly'
+gem 'sass-rails', '~> 3.1'
 
 group :production do
   gem 'unicorn'
@@ -24,7 +25,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.8.0'
 end
 group :assets do
-  gem 'sass-rails', '~> 3.1'
   gem 'coffee-rails', '~> 3.1'
   gem 'uglifier', '~> 1.0'
 end
