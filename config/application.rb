@@ -8,7 +8,7 @@ require 'carrierwave'
 # If you have a Gemfile, require the default gems, the ones in the
 # current environment and also include :assets gems if in development
 # or test environments.
-Bundler.require *Rails.groups(:assets) if defined?(Bundler)
+Bundler.require(*Rails.groups(:assets => %w(development test)))
 
 module DummyApp
   class Application < Rails::Application
