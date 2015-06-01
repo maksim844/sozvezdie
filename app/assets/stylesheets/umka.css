@@ -155,20 +155,7 @@ h3 {
 	line-height:14px;
 	}
 
-.yt {
-	background:url(/assets/umka/yt.png);
-	width:285px;
-	height:27px;
-	}
-.ym {
-	background:url(/assets/umka/ym.png);
-	width:285px;
-	}
-.yb {
-	background:url(/assets/umka/yb.png);
-	width:285px;
-	height:27px;
-	}
+
 .rightmenu li.item4 a, h4.item4 {
 	background-image:url(/assets/umka/icon4.png);
 	}

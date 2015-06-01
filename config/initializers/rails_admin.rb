@@ -62,6 +62,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Setting do
+    field :id
     field :section
     field :name
     field :adminEmail
