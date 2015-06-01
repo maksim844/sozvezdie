@@ -13,12 +13,12 @@ gem 'mini_magick'
 gem 'carrierwave'
 gem 'dragonfly'
 gem 'sass-rails', '~> 3.1'
+gem 'mysql2'
 
 group :production do
   gem 'unicorn'
 end
 group :development, :test do
-  gem 'mysql2'
   gem 'annotate', ">=2.5.0"
   gem "capistrano"
   gem "rvm-capistrano"
