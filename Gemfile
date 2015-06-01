@@ -1,4 +1,5 @@
 source 'http://rubygems.org'
+gem 'therubyracer'
 
 gem 'rails', '~> 3.1'
 gem 'cancan'
