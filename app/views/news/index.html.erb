@@ -1,0 +1,14 @@
+<h3>Новости</h3>
+<% @news.each do |n| %>
+    <div class="newsblock ">
+      <div class="smallimg">
+        <span class="bo">
+          <%= image_tag n.image.url(:thumb) %>
+          <span class="bl"></span><span class="tr"></span></span></div>
+      <div class="desc">
+        <h4><%= link_to n.name, news_show_path(params[:section], n.id)%></h4>
+        <p class="date"><%= n.date.strftime("%d.%m.%Y")%></p>
+        <%= n.anons.html_safe %>
+      </div>
+    </div>
+<% end %>

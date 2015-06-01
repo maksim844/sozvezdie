@@ -1,0 +1,14 @@
+
+  <h3>Новости</h3>
+  <h3><%= @news.name %></h3>
+  <div class="smallimg">
+    <span class="bo">
+      <%= image_tag @news.image.url(:thumb) %>
+      <span class="bl"></span>
+      <span class="tr"></span></span>
+  </div>
+  <%= @news.text.html_safe %>
+
+  <div class="clear"></div>
+  <br/>
+  <%= link_to "К списку новостей", news_path(params[:section]) %>

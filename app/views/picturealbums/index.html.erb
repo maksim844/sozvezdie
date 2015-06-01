@@ -1,0 +1,20 @@
+<h3>Фотоальбом</h3>
+<%@albums.each do |a| %>
+<div class="newsblock ">
+  <div class="smallimg">
+    <span class="bo">
+      <%= image_tag a.photo.url(:thumb) %>
+      <span class="bl">
+
+      </span>
+      <span class="tr"></span>
+    </span>
+  </div>
+  <div class="descphoto">
+
+    <h4><%= link_to a.name, picturealbum_show_path(params[:section], a.id) %></h4>
+    <img src="/assets/photo.png">&nbsp;<span style="font-size: 12px; position: relative; top: -2px;"><%= a.photos.count %> <%= Russian.p(a.photos.count, "фотография", "фотографии", "фотографий") %></span>
+
+  </div>
+</div>
+<% end %>

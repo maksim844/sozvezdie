@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title><?=$Page['Title']?></title>
+<link href="tools/style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="<?=Cubique::getSiteURi()?>favicon.ico"/>
+<script type="text/javascript" src="tools/flash.js"></script>
+<script type="text/javascript" src="tools/site.js"></script>
+<script type="text/javascript" src="tools/spec.js"></script>
+</head>
+
+<script>
+$(document).ready(function()
+{
+	$(".play").toggle(
+      function () 
+	  {
+        $(this).attr({"title":"Пауза"});
+      },
+      function () 
+	  {
+        $(this).attr({"title":"Проиграть"});
+      });
+})
+</script>
+
+<body id="body">
+<div id="wrap"><div id="w1">
+	<div id="main">
+		<div id="head">
+			<div class="right1">
+				<div id="tel">
+				<?=Cubique::GetSetting('telheader');?>							
+				</div>
+			</div>
+			<div class="right2">
+				<div id="online">
+					<a onclick="return linkWindow('<?=Cubique::MakeUri('webim/client.php')?>','?locale=ru','510','463');" href="javascript:void(0);">Задайте нам вопрос!</a>
+				</div>
+				<div id="adress">
+					<?=Cubique::GetSetting('contheader');?>	
+					<?=$dirInfo['yandex'];?>				
+				</div>
+			</div>
+			<div class="lefttop">
+				<ul>
+					<li class="play" title="Проиграть">
+						<object height="27" width="27" type="application/x-shockwave-flash" id="myplayer" name="myplayer" data="images/player.swf" style="visibility: visible;">
+							<param name="wmode" value="transparent" />
+							<param name="movie" value="images/player.swf" />
+							<param name="flashvars" value="filename=<?=Cubique::getSiteURi()?>/attachments/<?=Cubique::GetSetting ( 'fonmus' );?>">
+						</object>
+					</li>
+					
+					<li class="item3" title="Написать нам"><a href="<?=Cubique::getSiteURi()?>academy/contacts/"></a></li>
+					<li class="item2" title="Карта сайта"><a href="<?=Cubique::getSiteURi()?>sitemap"></a></li>
+					
+					<li class="item1" title="На главную"><a href="#"></a></li>
+					
+				</ul>
+				
+				<div class="logoflash">	
+				<script>GetFlash("attachments/<?=$flash?>")</script>
+				</div>
+				<span id="logo" ></span>
+			</div>
+		</div><!--head-->
+		<div id="sheet">
+			<div class="right1">
+				<!--<h3>Фотогалерея</h3>-->
+				<div class="gallery">	
+					<?=Cubique::LoadModule("PhotoOnMain")->Run()?>
+				</div>
+			</div><!--right1-->
+			<div class="right2">
+				<div class="rightmenu">
+					<div class="yt"></div>
+					<div class="ym">
+						<?=$Department?>
+					</div>
+					<div class="yb"></div>
+				</div><!--rightmenu-->
+				<div class="r2block">
+					<h3>Запись в студию</h3>
+					<div class="gt"></div>
+					<div class="gm">
+						<?=$Page['Application'];?>
+					</div>
+					<div class="gb"></div>
+				</div>
+				<div class="r2block">
+					<?=Cubique::LoadModule("MainPage")->GetInteresting()?>
+				</div><!--r2block-->
+			</div><!--right2-->
+			<div class="lefttop">
+				<div class="leftmenu">
+			<?=Cubique::LoadModule("Menu")->Run()?>
+					
+				</div><!--leftmenu-->
+				
+					
+					<?=$Page['Content']?>
+					
+				</div><!--content-->
+			</div><!--left-->
+			<div id="footer"><div id="fbg">
+				<div id="copy">
+					 <?=Cubique::GetSetting ( 'footerinfo' );?>
+						
+				</div>
+				<div id="copy2">
+					<p><br />
+					<a href="http://laconix.net" target="_blank">Создание сайта - LaCoNix</a>
+					</p>
+				</div>
+				<div id="tel2">
+					<?=Cubique::GetSetting ( 'footercont' );?>
+						
+				</div>
+			</div></div><!--footer-->
+		</div><!--sheet-->
+	</div><!--academy-->
+	<div class="clear"></div>
+</div></div><!--wrap-->
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter7730965 = new Ya.Metrika({id:7730965, enableAll: true, webvisor:true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/7730965" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<script src="log.php"></script>
+
+<script type="text/javascript">
+if (document.cookie.indexOf('noBrowserUpdate=1') == -1) document.write(
+'<script type="text/javascript" charset="utf-8" src="<?=Cubique::getSiteURi()?>tools/browserUpdate.js"></' + 'script>');
+</script>
+</body>
+</html>

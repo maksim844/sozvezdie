@@ -1,0 +1,68 @@
+<h3>Запись в студию</h3>
+<div class="gt"></div>
+<div class="gm">
+  <form action="http://sozvezdie.ieml.ru/" id="aplFRM" name="aplFRM" method="post" class="Frm" >
+    <form action="http://sozvezdie.ieml.ru/" id="aplFRM" name="aplFRM" method="post" >
+      <input id="name" onfocus="if(this.value=='Как вас зовут?*') this.value='';" onblur="if(this.value=='') this.value='Как вас зовут?*'" name="aplFRM[name]" value="Как вас зовут?*" class="inputbox" />
+      <input id="contacts" onfocus="if(this.value=='Как с Вами связаться?*') this.value='';" onblur="if(this.value=='') this.value='Как с Вами связаться?*'" name="aplFRM[contacts]" value="Как с Вами связаться?*" class="inputbox" />
+      <select id="department" name="aplFRM[department]" class="inputbox" >
+        <option selected="true" value="10" >Выберите направление*</option>
+        <option value="184" >Школа раннего развития «Умка»</option>
+        <option value="185" >Студия дизайна</option>
+        <option value="186" >Фитнес-класс</option>
+        <option value="188" >Психологический центр «Eventus»</option>
+        <option value="189" >Школа иностранных языков</option>
+      </select>
+      <div id="subdepartment">
+        <select id="subdep" name="aplFRM[subdep]" class="inputbox" >
+          <option value="10" >Выберите вид занятия*</option>
+          <option value="519" >Раннее развитие (комплексное занятие)</option>
+          <option value="520" >Группы кратковременного пребывания</option>
+          <option value="521" >Подготовка к школе (1-ый год)</option>
+          <option value="522" >Подготовка к школе (2-ой год)</option>
+          <option value="523" >Подготовка к школе (3-ий год)</option>
+          <option value="524" >Психолог</option>
+          <option value="525" >Логопед</option>
+          <option value="526" >Иностранные языки (англ. франц.)</option>
+          <option value="527" >Студия дизайна</option>
+          <option value="528" >Танцевальная студия</option>
+          <option value="529" >Йога для детей</option>
+          <option value="530" >Детский вокал</option>
+        </select></div>
+
+    <input type="submit" name="aplFRM[Submit]" value="" class="Button send SubmitButton" /><script>
+      $(document).ready(function()
+      {
+          $(".SubmitButton").live('click',function()
+          {
+              var error=false;
+
+              var Form=$("#aplFRM");
+
+              var name=Form.find("#name");
+              var contacts=Form.find("#contacts");
+
+              Form.find('input').removeClass("error");
+              Form.find('textarea').removeClass("error");
+
+              if((!name.val())||(name.val()=='Как вас зовут?*'))
+              {
+                  error=true;
+                  name.addClass("error");
+              }
+              if((!contacts.val())||(contacts.val()=='Как с Вами связаться?*'))
+              {
+                  error=true;
+                  contacts.addClass("error");
+              }
+
+              if(error)
+                  return false;
+              else
+                  return true;
+              return false;
+          });
+      });
+  </script></form></form>
+</div>
+<div class="gb"></div>

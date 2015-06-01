@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2416760901">
+    <data-source source="LOCAL" name="Rails dummy_app: development" uuid="5d953a31-2e19-4102-b61b-271830107cc3">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/sozvezdie</jdbc-url>
+      <user-name>apps_user</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails dummy_app: production" uuid="4115e3b3-d7e6-4a59-a893-a47321a6ab18">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/coincoin</jdbc-url>
+      <user-name>root</user-name>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

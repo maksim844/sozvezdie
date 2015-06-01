@@ -1,0 +1,993 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0; padding:0;}
+/*
+a {
+	outline:none;
+	cursor:pointer;
+	color:#753700;
+	text-decoration:underline;
+	}
+*/	
+a:hover {
+	text-decoration:none;
+	}
+img { border:none;}
+#body {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+	line-height:18px;
+	background:#FFF url(../images/umka/mbg.jpg) center top repeat-y;
+	color:#434343;
+	}
+#wrap {
+	background:url(../images/umka/fbg.jpg) center bottom no-repeat;
+	}
+#w1 {
+	background:url(../images/umka/hbg.jpg) center top no-repeat;
+}
+#main {
+	width:980px;
+	margin: 0 auto;
+	}
+.right1 {
+	float:right;
+	width:250px;
+	}
+.right2 {
+	float:right;
+	width:308px;
+	}
+.left {
+	float:right;
+	width:393px;
+	}
+#head {
+	height:148px;
+	}
+#tel {
+	padding:70px 0 0 55px;
+	background:url(../images/umka/tel.png) 0 68px no-repeat;
+	color:#FFF;
+	}
+#tel a, #adress a, #online a {
+	color:#41deff;
+	text-decoration:none;
+	border-bottom: 1px dashed #41deff;
+	}
+#adress {
+	padding:70px 0 0 77px;
+	background:url(../images/umka/adress.png) 29px 68px no-repeat;
+	color:#FFF;
+	}
+#head .left ul {
+	padding-top:22px;
+	padding-right:25px;
+	height:29px;
+	}
+#head .left ul li {
+	list-style:none;
+	float:right;
+	margin-left:6px;
+	}
+#head .left ul li.item1 a {
+	display:block;
+	width:27px;
+	height:27px;
+	background:url(../images/umka/icon1.png);
+	}
+#head .left ul li.item2 a {
+	display:block;
+	width:27px;
+	height:27px;
+	background:url(../images/umka/icon2.png);
+	}
+#head .left ul li.item3 a {
+	display:block;
+	width:27px;
+	height:27px;
+	background:url(../images/umka/icon3.png);
+	}
+#head .left ul li.pause a {
+	display:block;
+	width:27px;
+	height:27px;
+	background:url(../images/umka/pause.png);
+	margin-left:56px;
+	}
+#head .left ul li.play a {
+	display:block;
+	width:27px;
+	height:27px;
+	background:url(../images/umka/play.png);
+	margin-left:56px;
+	}
+#head .left ul li.active a {
+	background-position: 0 -27px;
+	}
+#head .left ul li.pause a:hover {
+	background-position: 0 0;
+	}
+#logo {
+	float:left;
+	display:block;
+	width:159px;
+	height:95px;
+	background:url(../images/logo1.png);
+	left: 35px;
+    position: relative;
+    top: 10px;
+	}
+.logoflash
+{
+	float:left;
+	display:block;
+	width:95px;
+	height:95px;
+	
+}	
+h3 {
+	font-size:24px;
+	font-family: "Times New Roman", Times, serif;
+	color:#000;
+	font-weight:normal;
+	text-transform:uppercase;
+	margin-bottom:30px;
+	line-height:normal;
+	}
+#sheet .right1 img {
+	margin-bottom:18px;
+	}
+.clear { clear:both;}
+.gallery { text-align:center;}
+.rightmenu {
+	}
+.rightmenu li{
+	margin:0 28px 0 68px;
+	list-style:none;
+	border-bottom:1px dashed #D99C0F;
+	padding-bottom:9px;
+	}
+.rightmenu li a {
+	padding-left:47px;
+	margin-left:-47px;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	display:block;
+	padding-top:16px;
+	height:26px;
+	font-size:12px;
+	line-height:14px;
+	}
+
+.yt {
+	background:url(../images/umka/yt.png);
+	width:285px;
+	height:27px;
+	}
+.ym {
+	background:url(../images/umka/ym.png);
+	width:285px;
+	}
+.yb {
+	background:url(../images/umka/yb.png);
+	width:285px;
+	height:27px;
+	}
+.rightmenu li.item4 a, h4.item4 {
+	background-image:url(../images/umka/icon4.png);
+	}
+.rightmenu li.item5 a, h4.item5 {
+	background-image:url(../images/umka/icon5.png);
+	}
+.rightmenu li.item6 a, h4.item6{
+	background-image:url(../images/umka/icon6.png);
+	}
+.rightmenu li.item7 a, h4.item7{
+	background-image:url(../images/umka/icon7.png);
+	}
+.rightmenu li.item8 a, h4.item8{
+	background-image:url(../images/umka/icon8.png);
+	}
+.rightmenu li.item9 a, h4.item9{
+	background-image:url(../images/umka/icon9.png);
+	}
+.r2block {
+	width:267px;
+	margin:50px 0 18px 10px;
+	}
+.gt {
+	background:url(../images/umka/gt.png);
+	height:19px;
+	}
+.gm {
+	background:url(../images/umka/gm.png);
+	padding:8px 0 8px 18px;
+	overflow: auto;
+	}
+.gb {
+	background:url(../images/umka/gb.png);
+	height:15px;
+	}	
+.bt {
+	background:url(../images/umka/bt.png);
+	height:19px;
+	}
+.bg {
+	background:url(../images/umka/bg.png);
+	padding:8px 0 8px 18px;
+	}
+.bb {
+	background:url(../images/umka/bb.png);
+	height:15px;
+	}
+input.inputbox {
+	background:url(../images/umka/ibg.png);
+	padding:2px 6px;
+	width:220px;
+	height:22px;
+	font-size:12px;
+	color:#000;
+	line-height:22px;
+	margin-bottom:10px;
+	border:none;
+	}
+textarea.inputbox {
+	background: url(../images/umka/tabg.png);
+	padding:2px 6px;
+	width:220px;
+	height:111px;
+	font-size:12px;
+	color:#000;
+	line-height:22px;
+	margin-bottom:10px;
+	border:none;
+	font-family:Tahoma, Geneva, sans-serif;
+	}
+select.inputbox {
+	background:url(../images/umka/ibg.png);
+	padding:2px 6px;
+	width:232px;
+	height:26px;
+	font-size:12px;
+	color:#000;
+	line-height:22px;
+	margin-bottom:10px;
+	border:none;
+	}
+.send {
+	background:url(../images/umka/sendbut.png);
+	width:191px;
+	height:34px;
+	cursor:pointer;
+	border:none;
+	margin-left:21px;
+	}
+.r2block p {
+	padding-left:17px;
+	margin-bottom:9px;
+	}
+.leftmenu {
+	height:340px;
+	position:relative;
+	padding-right:25px;
+	}
+.leftmenu .umka {
+	height:340px;
+	position: absolute;
+	top:-10px;
+	right:28px;
+	width:150px;
+	height:70px;
+	background:url(../images/umka/umka.png) top right no-repeat;
+	padding-right:70px;
+	font-size:12px;
+	color:#FFF;
+	}
+.leftmenu .umka p {
+	font-size:30px;
+	padding:20px 0 5px;
+	}
+.leftmenu ul {
+	float:right;
+	margin-left:10px;
+	padding-top:75px
+	}
+#sheet .right1 {
+	padding-top:82px;
+	}
+.leftmenu ul li {
+	list-style:none;
+	margin-bottom:4px;
+	}
+ul.leftmenu2 {
+	margin-top:-38px;
+	height:90px;
+	}
+ul.leftmenu2  li {
+	list-style:none;
+	float:left;
+	}
+.leftmenu ul li a{
+	display:inline-block;
+	height:12px;
+	line-height:12px;
+	padding:6px 10px 9px;
+	text-decoration: underline;
+	position:relative;
+	z-index:3;
+	 color: #41DEFF;
+	
+	font-size:12px;
+	text-transform:uppercase;
+	white-space:nowrap;
+}/*color:#006c83;*/
+ul.leftmenu2  li a{
+	display:inline-block;
+	height:12px;
+	line-height:12px;
+	padding:8px 10px 15px;
+	text-decoration: underline;
+	position:relative;
+	z-index:3;
+	color:#753700;
+	font-size:12px;
+	white-space:nowrap;
+}
+.leftmenu ul li a:hover, .leftmenu ul li a.active, ul.leftmenu2  li a:hover, ul.leftmenu2  li a.active{
+	text-decoration:none;
+	}
+ul.leftmenu2  li a.active{
+	color:#FFF;
+	}
+.leftmenu .bo {
+	display:inline-block;
+	position:relative;
+	height:25px;
+	}
+.leftmenu .bl {
+	position:absolute;
+	width:9px;
+	height:25px;
+	bottom:0;
+	left:0;
+	z-index:2;
+	background:url(../images/umka/bl.png);
+	}
+.leftmenu .br {
+	position:absolute;
+	width:9px;
+	height:25px;
+	bottom:0;
+	right:0;
+	background:url(../images/umka/br.png);
+	z-index:2;
+	}
+.leftmenu .bm {
+	position:absolute;
+	height:25px;
+	bottom:0;
+	right:9px;
+	left:9px;
+	z-index:2;
+	background:url(../images/umka/bm1.png);
+	}
+.leftmenu2 .bo {
+	display:inline-block;
+	position:relative;
+	height:35px;
+	}
+.leftmenu2 .bl {
+	position:absolute;
+	width:5px;
+	height:35px;
+	bottom:0;
+	left:0;
+	z-index:2;
+	background:url(../images/umka/fl.png);
+	}
+.leftmenu2 .br {
+	position:absolute;
+	width:5px;
+	height:35px;
+	bottom:0;
+	right:0;
+	background:url(../images/umka/fr.png);
+	z-index:2;
+	}
+.leftmenu2 .bm {
+	position:absolute;
+	height:35px;
+	bottom:0;
+	right:5px;
+	left:5px;
+	z-index:2;
+	background:url(../images/umka/fm.png);
+	}
+.content {
+	margin-bottom:18px;
+	}
+.content p {
+	padding:0 17px;
+	margin-bottom:9px;
+	}
+p.readmore {
+	padding:0 !important;
+	margin:0 !important;
+	color:#753700;
+	}
+.content p.date {
+	color:#979797;
+	font-size:12px;
+	line-height:14px;
+	margin:0;
+	}
+.sep {
+	background:none;
+	border-bottom:1px dashed #D99C0F;
+	margin: 0 17px 15px;
+	padding-top:15px;
+	}
+#footer {
+	float:left;
+	width:660px;
+	height:115px;
+	padding-bottom:75px;
+	margin-left:45px;
+	border-top:1px dashed #009DE0;
+	padding-top:25px;
+	margin-top:100px;
+	}
+#copy {
+	font-size:12px;
+	font-family:"Times New Roman", Times, serif;
+	width:385px;
+	height:70px;
+	float:left;
+	color:#434343;
+	}
+#copy2 {
+	font-size:12px;
+	font-family:"Times New Roman", Times, serif;
+	width:275px;
+	height:70px;
+	float:left;
+	color:#434343;
+	}
+#copy a, #copy2 a {
+	color:#006c83;
+	}
+#tel2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#6a6a6a;
+	}
+#tel2 p {
+	font-size:30px;
+	color:#753700;
+	padding-top:5px;
+	}
+.circle {
+	padding-left:20px;
+	background:url(../images/umka/circle.png) 5px 13px no-repeat;
+	}
+.article {
+	float:right;
+	width:670px;
+	padding-right:31px;
+	}
+p.list {
+	padding-left:30px;
+	}
+.newsblock {
+	clear:left;
+	margin-bottom:17px;
+	}
+.article h3 {
+	text-transform:uppercase;
+	}
+.smallimg {
+	float:left;
+	margin-right: 10px;
+	}
+.smallimg .bo {
+	display:inline-block;
+	position:relative;
+	}
+.smallimg .bl {
+	position:absolute;
+	width:15px;
+	height:15px;
+	bottom:0;
+	left:0;
+	z-index:2;
+	background:url(../images/umka/ibl.png);
+	}
+.smallimg .tr {
+	position:absolute;
+	width:15px;
+	height:15px;
+	top:0;
+	right:0;
+	background: url(../images/umka/itr.png);
+	z-index:3;
+	}
+.desc {
+	margin-left:182px;
+	min-height:160px;
+	border-bottom: 1px dashed #009DE0;
+	}
+	
+.descphoto
+{
+	margin-left:100px;
+	min-height:80px;
+	border-bottom: 1px dashed #D99C0F;
+}
+.content .desc p {
+	padding:0;
+	}
+.content .desc p.date {
+	color:#434343;
+	font-size:12px;
+	line-height:14px;
+	margin-bottom:10px;
+	}
+h4 {
+	font-size:14px;
+	font-weight:normal;
+	margin-bottom:10px;
+	}
+.content .last .desc {
+	border:none;
+	}
+.pagin {
+	margin-left:182px;
+	}
+.pagin span {
+	color:#753700;
+	text-align:center;
+	display:inline-block;
+	width:22px;
+	padding-top:1px;
+	height:21px;
+	}
+
+.pagin span.active {
+	background:url(../images/umka/pg.png);
+	color:#FFF;
+}
+#mess, .CaptchaError
+{
+	color:red;
+    display: block;
+    min-height: 30px;
+    position: relative;
+}
+#mess1{color:red; margin-top:-50px;}
+/*
+.album {
+    display: block;
+    float: left;
+    height: 190px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+    width: 200px;
+}*/
+.alb_img {text-decoration:none;}
+.socwid{margin-top: 30px;}
+.comment { margin: 10px 0 10px 0px;}
+.guest{ margin: 15px 0 15px 0;}
+.video { width: 700px; text-align:center; margin-bottom:20px;}
+
+.subscr {
+	padding:40px 0 0 182px;
+	}
+.subscr form {
+	background:url(../images/umka/bbg.png);
+	padding:17px 0 0 17px;
+	width:479px;
+	height:45px;
+	}
+.subscr form .inputbox {
+	margin:0;
+	float:left;
+	background:url(../images/umka/ibg2.png);
+	width:328px;
+	}
+.subscr form .send {
+	background:url(../images/umka/sendbut2.png);
+	width:110px;
+	margin-left:14px;
+	margin-top:-2px;
+	}
+.captcha {
+	height:72px;
+	width:230px;
+	padding-top:3px;
+	}
+.captcha img {
+	float:left;
+	margin-right:16px;
+	}
+.captcha p {
+	font-size:12px;
+	color:#000;
+	line-height:14px;
+	margin-top:-3px;
+	}
+.captcha  input	
+input.inputbox2, .captcha  input {
+	background: url(../images/umka/ibg3.png);
+	padding:2px 6px;
+	width:78px;
+	height:22px;
+	font-size:12px;
+	color:#000;
+	line-height:22px;
+	margin-bottom:10px;
+	border:none;
+	}
+.send2 {
+	background: url(../images/umka/sendbut2.png);
+	width:110px;
+	height:34px;
+	cursor:pointer;
+	border:none;
+	margin-right:11px;
+	/*float:left;*/
+	}
+.reset {
+	background: url(../images/umka/sendbut3.png);
+	width:110px;
+	height:34px;
+	cursor:pointer;
+	border:none;
+	float: left;
+	}
+#online {
+	float:left;
+	margin-left:60px;
+	padding:28px 0 0 44px;
+	background:url(../images/umka/online.png) 0 22px no-repeat;
+	height:21px;
+	}
+h4.title {
+	background-repeat:no-repeat;
+	background-position:left top;
+	padding:18px 0 0 45px;
+	height:24px;
+	font-size:18px;
+	color:#000;
+	font-weight: normal;
+	margin-bottom:11px;
+	}
+table.schedule
+ {
+	border-collapse:collapse;
+	border:1px solid #753700;
+	margin-bottom:20px;
+	}
+table.schedule th,
+table.schedule .head td
+{
+	background:#753700;
+	height:30px;
+	color:#FFF;
+	font-size:14px;
+	border-style: dashed !important;
+    border-width: 1px !important;
+}
+table.schedule td{
+	font-size:12px;
+	color:#434343;
+	border:1px solid #753700;
+	height:30px;
+	}
+.comment {
+	margin-bottom:15px;
+	}
+.comment p.date{
+	font-size:10px;
+	color:#919191;
+	}
+.item {
+	font-size:12px;
+	color:#434343;
+	position: relative;
+	padding:43px 0 26px;
+	width:385px;
+	}
+.comt {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:43px;
+	background:url(../images/umka/comt.png);
+	z-index:4;
+	}
+.comm {
+	position:absolute;
+	top:43px;
+	bottom:26px;
+	left:0;
+	right:0;
+	background:url(../images/umka/comm.png);
+	z-index:4;
+	}
+.comb {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:26px;
+	background:url(../images/umka/comb.png);
+	z-index:4;
+	}
+.item p,.item div{
+	position:relative;
+	z-index:5;
+	margin: 0 20px;
+	}
+.album {
+	margin-bottom:35px;
+	}
+.album .smallimg .bl {
+	position:absolute;
+	width:7px;
+	height:7px;
+	bottom:0;
+	left:0;
+	z-index:2;
+	background:url(../images/umka/ibls.png);
+	}
+.album .smallimg .tr {
+	position:absolute;
+	width:7px;
+	height:7px;
+	top:0;
+	right:0;
+	background: url(../images/umka/itrs.png);
+	z-index:3;
+	}
+.album .desc {
+	margin-left:98px;
+	min-height:72px;
+	border-bottom: 1px dashed #009DE0;
+	}
+.album h4 {
+	padding-top:7px;
+	}
+#sheet .photo {
+	margin-left:100px;
+	}
+.teachers h4 {
+	font-size:18px;
+	color:#000;
+	}
+.teachers {
+	margin-bottom:28px;
+	}
+.teachers .desc 
+{
+    border-bottom: 1px dashed #009DE0;
+    margin-left: 216px;
+    min-height: 220px;
+    padding-bottom: 28px;
+    padding-right: 20px;
+}
+.teachersimg {
+	float:left;
+	position: relative;
+	}
+.teachersbg {
+	position:absolute;
+	top:0;
+	left:0;
+	width:200px;
+	height:200px;
+	/*background:url(../images/umka/teachers.png);*/
+	z-index:5;
+	}
+p.link {
+	line-height:27px;
+	}
+	
+	#aplFRM {
+    margin: 0 0 0;
+}
+
+
+.album1 {
+    display: block;
+    float: left;
+    height: 190px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+    width: 200px;
+}
+.content table p {
+    padding:0 10px;
+}
+.content ul {
+    padding:0 37px;
+}
+.alb_img {text-decoration:none;}
+.socwid{margin-top: 30px;}
+.comment { margin: 10px 0 10px 0px;}
+.guest{ margin: 15px 0 15px 0;}
+.video { width: 700px; text-align:center; margin-bottom:20px;}
+
+
+/* SiteMap */
+div.SiteMap ul li ul li ul li ul li a{
+	font-size: 90%;
+}
+
+div.SiteMap ul li ul li ul li a{
+	font-size: 100%;
+}
+
+div.SiteMap ul li ul li a{
+	font-size: 110%;
+}
+
+div.SiteMap ul li a{
+	font-size: 130%;
+}
+
+div.SiteMap ul{
+	margin-bottom: 22px;	
+	padding-left:20px;
+	margin-left:0px;
+	list-style:none;
+}
+div.SiteMap ul li ul{
+
+list-style:none;
+}
+
+div.SiteMap ul.SitemapContainer0{
+	border: none;
+	margin: 0;
+	padding: 0;
+	
+	margin-top: 25px;
+	margin-left: 80px;
+}
+
+div.SiteMap li{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+div.SiteMap ul li ul li ul li ul li{
+	list-style: none;
+}
+
+div.SiteMap ul li ul li ul li{
+	list-style: circle;
+}
+/*
+div.SiteMap ul li ul li{
+	list-style: disc;
+}
+*/
+
+div.SiteMap ul li ul{
+	margin-top: -4px;
+	list-style:none;
+}
+#mailForm
+{
+	background:url(../images/umka/bbg2.png);
+    height:45px;
+	width:339px;
+	//width:356px;
+    padding:17px 0 0 17px;
+    //padding-left:0px;
+	margin-left:17px;
+	position: relative;
+    
+}
+#mailForm .inputbox {
+    float: left;
+    margin: 0;
+    width: 191px;
+}
+#mailForm .SubmitButton {
+    background: url("../images/umka/sendbut2.png") repeat scroll 0 0 transparent;
+        height: 34px;
+    margin-left: 14px;
+    margin-top: -2px;
+    width: 109px;
+}
+.news {
+    display: block;
+    margin: 10px 0;
+}
+span.err
+{
+	color: #ED2027;
+    font-size: 11px;
+    left: 20px;
+    position: absolute;
+    top: 0;
+}
+.HideFields input
+{
+	display: none;
+}
+.album {
+    display: block;
+    float: left;
+    height: 190px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+    width: 200px;
+}
+ol
+{
+	padding-left: 40px;
+}
+
+#contactFRM .error,
+#aplFRM .error
+{
+	color: #C32228;
+}
+#contactFRM .sbmBtn
+{
+	text-align: center;
+}
+
+.comment {
+	margin-bottom:15px;
+	}
+.comment p.date{
+	font-size:10px;
+	color:#919191;
+	}
+.item {
+	font-size:12px;
+	color:#434343;
+	position: relative;
+	padding:43px 0 26px;
+	width:385px;
+	}
+.comt {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:43px;
+	background:url(../images/comt.png);
+	z-index:4;
+	}
+.comm {
+	position:absolute;
+	top:43px;
+	bottom:26px;
+	left:0;
+	right:0;
+	background:url(../images/comm.png);
+	z-index:4;
+	}
+.comb {
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	height:26px;
+	background:url(../images/comb.png);
+	z-index:4;
+	}
+.item p{
+	position:relative;
+	z-index:5;
+	}

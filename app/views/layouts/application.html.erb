@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+  <title>Созвездие | <%= section_name(params[:section])%></title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link href="http://sozvezdie.ieml.ru/favicon.ico" rel="shortcut icon">
+  <%= stylesheet_link_tag :style, :design, params[:section],:welcome, :media => 'all'  %>
+  <%= javascript_include_tag :application, :flash, :site, :spec %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body id="body" class=<%= params[:section]%>>
+    <div id="wrap">
+        <div id="w1">
+            <div id="main">
+                <%= render :partial => 'layouts/header' %>
+                  <div id="sheet">
+                    <div class="left">
+                      <div class="header_bloc">
+                        <div class="right2">
+                          <div class="rightmenu">
+                            <div class="yt"></div>
+                            <div class="ym">
+                              <ul>
+                                <%= main_menu(params[:section]) %>
+                              </ul>
+                            </div>
+                            <div class="yb"></div>
+                          </div><!--rightmenu-->
+                        </div><!--right2-->
+                        <div class="lefttop">
+                          <div class="leftmenu1 leftmenu">
+                            <%= section_attr(params[:section]) %>
+                            <ul class="m1">
+                                <%= left_menu(params[:section]) %>
+                            </ul>
+                          </div>
+                          <div class="submenu">
+                            <ul class="leftmenu2">
+
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="clear"></div>
+                        <%= yield %>
+                  </div>
+                </div>
+                <div class="right right2">
+                  <!--<h3>Фотогалерея</h3>-->
+                  <div class="gallery">
+                    <img src="/assets/dm_pics/4f4cf4bd8e752.png" width="200" height="200"  alt ="1"/>
+                    <img src="/assets/dm_pics/4f4db7558b701.png" width="200" height="200"  alt ="2"/>
+                    <img src="/assets/dm_pics/4f4db74d2814b.png" width="200" height="200"  alt ="3"/>
+                  </div>
+                </div>
+              </div>
+                <%= render :partial => 'layouts/footer' %>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+</html>

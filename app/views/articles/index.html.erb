@@ -1,0 +1,16 @@
+<h3>Статьи</h3>
+<% @articles.each do |a| %>
+    <div class="newsblock ">
+      <div class="smallimg">
+        <span class="bo">
+          <%= image_tag a.image.url(:thumb) %>
+          <span class="bl"></span>
+          <span class="tr"></span>
+        </span></div>
+      <div class="desc">
+        <h4><%= link_to a.name, article_show_path(params[:section], a.id) %></h4>
+        <p class="date"><%= a.date.strftime("%d.%m.%Y")%></p>
+        <%= a.anons.html_safe %>
+      </div>
+    </div>
+<% end %>

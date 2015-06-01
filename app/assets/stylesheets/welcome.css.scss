@@ -1,0 +1,98 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in style.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.MainPageUmka{
+  background-image: url(/assets/dm_pics/4def225f86f82.png);
+}
+
+ .MainPageDesign{
+   background-image: url(/assets/dm_pics/4def22be9a4df.png);
+ }
+
+.MainPageFitness{
+  background-image: url(/assets/dm_pics/4def22eea6b1e.png);
+}
+
+.MainPageCafe{
+  background-image: url(/assets/dm_pics/4def2314a7b10.png);
+}
+
+.MainPageEventus{
+  background-image: url(/assets/dm_pics/4def232f1b0d7.png);
+}
+
+.MainPageLanguages{
+  background-image: url(/assets/dm_pics/4def235c96764.png);
+}
+
+
+#sheet .right1 {
+  padding-top: 100px;
+}
+
+.content_block {
+  .about {
+    float: left;
+    width: 60%;
+  }
+  .r2block{
+    float: left;
+  }
+}
+
+#sheet{
+  .left{
+    float: left;
+    width: 76%
+  }
+  .right{
+    width: 210px;
+    margin-top: 133px;
+  }
+}
+
+
+.content p {
+  padding: 0 25px 10px 0;
+  margin: 4px 0;
+}
+
+.news {
+  margin: 25px 0;
+}
+
+
+.leftmenu1{
+  ul{
+    li{
+      float: right;
+      width: 35%;
+      .bo {
+        display: inline-block;
+        position: relative;
+        height: auto;
+      }
+      .bl,.bm,.br{
+        bottom: 3px;
+      }
+    }
+  }
+}
+
+.leftmenu .umka p {
+  font-size: 18px;
+  padding: 20px 0 5px;
+}
+
+.lefttop .design p{
+  width: 100px;
+}
+.lefttop .languages p{
+  width: 180px;
+}
+
+.leftmenu .academy {
+  display: none;
+}

@@ -1,0 +1,37 @@
+.pollItem {
+	width: 215px;
+	height: 10px;
+	padding: 3px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	background: #bfbeb3;
+	float: left;
+	margin-bottom: 2px;
+}
+
+.pollItem b {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	width: 221px;
+	height: 16px;
+	background: url(../images/pollitem.png);
+	overflow: hidden;
+	left: 0;
+	top: 0;
+}
+
+.pollLine {
+	height: 10px;
+	overflow: hidden;
+	background: #06af4b url(../images/pollline.png) no-repeat right top;
+}
+
+.pollPer {
+	float: left;
+	padding: 1px 0 0 10px;
+	font-size: 11px;
+	color: #bfbeb3;
+	line-height: normal;
+}

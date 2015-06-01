@@ -1,0 +1,66 @@
+  <h3>Гостевая</h3>
+  <div><p class="MsoNormal">Уважаемые посетители нашего сайта! Нам очень важна Ваша
+    точка зрения! Здесь Вы можете оставить свои пожелания, мнения и задать
+    интересующие Вас вопросы.</p></div>
+  <div class="clear"></div>
+  <div style=" float:left;  width: 380px;"></div>
+  <div style=" float:right">
+    <div class="r2block">
+      <div class="gt"></div>
+      <div class="gm"><form action="http://sozvezdie.ieml.ru/guestbook/" id="contactFRM" name="contactFRM" method="post" class="Frm"><p style=" font-size: 11px;"><span class="require">*</span> - Обязательные для заполнения поля</p>
+
+
+        <!--  <form action="#" method="post" class="concact">-->
+
+        <input id="name" onfocus="if(this.value=='Ваше имя*') this.value='';" onblur="if(this.value=='') this.value='Ваше имя*'" name="contactFRM[name]" value="Ваше имя*" class="inputbox"><input id="email" onfocus="if(this.value=='E-mail*') this.value='';" onblur="if(this.value=='') this.value='E-mail*'" name="contactFRM[email]" value="E-mail*" class="inputbox"><input onfocus="if(this.value=='Телефон') this.value='';" onblur="if(this.value=='') this.value='Телефон'" name="contactFRM[phone]" value="Телефон" class="inputbox"><textarea rows="10" onfocus="if(this.value=='Текст сообщения*') this.value='';" onblur="if(this.value=='') this.value='Текст сообщения*';" id="msgtext" name="contactFRM[question]" class="inputbox">Текст сообщения*</textarea><!--
+<input type="text" class="inputbox" onfocus="if(this.value=='E-mail*') this.value='';" onblur="if(this.value=='') this.value='E-mail*';"  value="E-mail*" name="mail" />
+<input type="text" class="inputbox" onfocus="if(this.value=='Телефон') this.value='';" onblur="if(this.value=='') this.value='Телефон';"  value="Телефон" name="phone" />
+<textarea class="inputbox" onfocus="if(this.value=='Текст сообщения*') this.value='';" onblur="if(this.value=='') this.value='Текст сообщения*';"  value="Текст сообщения*"></textarea>
+ -->
+
+        <div class="sbmBtn">
+          <input type="submit" name="contactFRM[Submit]" value="" class="Button send2 SubmitButton"></div>
+        <script>
+            $(document).ready(function()
+            {
+                $(".SubmitButton").live('click',function()
+                {
+                    var error=false;
+
+                    var Form=$("#contactFRM");
+
+                    var name=Form.find("#name");
+                    var email=Form.find("#email");
+                    var phone=Form.find("#phone");
+                    var msgtext=Form.find("#msgtext");
+
+                    Form.find('input').removeClass("error");
+                    Form.find('textarea').removeClass("error");
+
+                    if((!name.val())||(name.val()=='Ваше имя*'))
+                    {
+                        error=true;
+                        name.addClass("error");
+                    }
+                    if((!email.val())||(email.val()=='E-mail*'))
+                    {
+                        error=true;
+                        email.addClass("error");
+                    }
+                    if((!msgtext.val())||(msgtext.val()=='Текст сообщения*'))
+                    {
+                        error=true;
+                        msgtext.addClass("error");
+                    }
+
+                    if(error)
+                        return false;
+                    else
+                        return true;
+                    return false;
+                });
+            })
+        </script>							</form></div>
+      <div class="gb"></div>
+    </div>
+  </div>

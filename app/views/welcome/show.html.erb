@@ -1,0 +1,23 @@
+<div class="content_block">
+  <div class="content about">
+    <%= content_tag :h3, @title unless @title.nil?%>
+    <%= @setting.about.html_safe %>
+  </div>
+  <div class="r2block">
+    <%= render :partial => 'feedback_studio' %>
+  </div>
+
+  <div class="clear"></div>
+
+  <div class="content">
+    <h3>Наши Новости</h3>
+    <% @news.each do |n| %>
+        <div class="news">
+          <p class="date"><%= n.date.strftime("%d.%m.%Y")%></p>
+          <h4><%= link_to n.name, news_path(n.id) %></h4>
+          <%= n.anons.html_safe %>
+        </div>
+    <% end %>
+    <%= link_to "Все новости", all_news_path(params[:section])%>
+  </div>
+</div>

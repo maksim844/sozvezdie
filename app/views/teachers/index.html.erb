@@ -1,0 +1,13 @@
+<h3>Руководители</h3>
+<% @teachers.each do |t| %>
+    <div class="teachers">
+      <div class="teachersimg"><span class="teachersbg"></span>
+        <%= image_tag t.photo.url(:thumb)%>
+      </div>
+      <div class="desc">
+        <h4><%= link_to t.name, teacher_show_path(params[:section], t.id) %></h4>
+        <p><%= t.post %></p>
+        <p><br></p>
+      </div>
+    </div>
+<% end %>

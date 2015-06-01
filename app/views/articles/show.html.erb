@@ -1,0 +1,14 @@
+
+  <h3>Руководители</h3>
+  <h4><%= @teacher.name %></h4>
+  <div class="smallimg">
+    <span class="bo">
+      <%= image_tag @teacher.photo.url(:w162) %>
+      <span class="bl"></span>
+      <span class="tr"></span></span>
+  </div>
+  <%= @teacher.text.html_safe %>
+
+  <div class="clear"></div>
+  <br/>
+  <%= link_to "К списку преподавателей", teacher_path(params[:section]) %>
