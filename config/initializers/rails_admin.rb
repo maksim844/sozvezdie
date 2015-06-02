@@ -85,7 +85,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Teacher do
-    field :section
+    field :node
     field :name
     field :post
     field :anons, :rich_editor
@@ -117,8 +117,15 @@ RailsAdmin.config do |config|
 
   end
   config.model News do
-      field :id
-      field :node
+      field :node do
+        associated_collection_scope do
+          Proc.new { |scope|
+            scope = scope.where("name = 'Новости'")
+          }
+          partial :node_partial
+        end
+
+      end
       field :date
       field :name
       field :anons, :rich_editor

@@ -7,10 +7,10 @@ DummyApp::Application.routes.draw do
   resources :nodes
   get 'nodes/:section/:page' => 'nodes#show'
  # get 'nodes/show/:id/:url' => 'nodes#show', as: :node_page
-  resources :news
-  get ':section/news/' => 'news#index', as: :news
-  get ':section/news/:id' => 'news#show' , as: :news_show
-  get 'news/:section/all' => 'news#all', as: :all_news
+  resources :main
+  get ':section/main/' => 'main#index', as: :main
+  get ':section/main/:id' => 'main#show' , as: :news_show
+  get 'main/:section/all' => 'main#all', as: :all_news
 
   resources :picturealbums
   get ':section/picturealbum/' => 'picturealbums#index', as: :picturealbum

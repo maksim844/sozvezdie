@@ -1,5 +1,5 @@
 class AddColumnSectionIdToNews < ActiveRecord::Migration
   def change
-    add_column :news, :node_id, :integer
+    add_column :main, :node_id, :integer
   end
 end

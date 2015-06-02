@@ -997,7 +997,7 @@ ActiveRecord::Schema.define(:version => 20150524161504) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "news", :force => true do |t|
+  create_table "main", :force => true do |t|
     t.integer  "node_id"
     t.string   "name"
     t.date     "date"
@@ -1009,8 +1009,8 @@ ActiveRecord::Schema.define(:version => 20150524161504) do
     t.datetime "image_updated_at"
   end
 
-  add_index "news", ["id"], :name => "idx___DocID"
-  add_index "news", ["node_id"], :name => "idx___ParentDocID"
+  add_index "main", ["id"], :name => "idx___DocID"
+  add_index "main", ["node_id"], :name => "idx___ParentDocID"
 
   create_table "nodes", :force => true do |t|
     t.integer "node_id",                       :default => 0,  :null => false
