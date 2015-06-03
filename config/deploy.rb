@@ -17,8 +17,8 @@ require 'bundler/capistrano' # Для работы bundler. При измене�
 set :application, "dummy_app"
 set :rails_env, "production"
 
-#set :domain, "deployer@79.143.190.205" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
-set :domain, "deployer@84.18.102.4"
+set :domain, "deployer@79.143.190.205" # Это необходимо для деплоя через ssh. Именно ради этого я настоятельно советовал сразу же залить на сервер свой ключ, чтобы не вводить паролей.
+#set :domain, "deployer@84.18.102.4"
 set :deploy_to, "/var/www/#{application}"
 set :use_sudo, false
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
@@ -28,8 +28,8 @@ set :rvm_ruby_string, 'ruby-2.1.1' # Это указание на то, како
 #set :rvm_bin_path, "/usr/local/rvm/bin"
 
 set :scm, :git # Используем git. Можно, конечно, использовать что-нибудь другое - svn, например, но общая рекомендация для всех кто не использует git - используйте git. 
-#set :repository,  "git@github.com:maksim844/sozvezdie.git" # Путь до вашего репозитария. Кстати, забор кода с него происходит уже не от вас, а от сервера, поэтому стоит создать пару rsa ключей на сервере и добавить их в deployment keys в настройках репозитария.
-set :repository,  "https://github.com/maksim844/sozvezdie.git"
+set :repository,  "git@github.com:maksim844/sozvezdie.git" # Путь до вашего репозитария. Кстати, забор кода с него происходит уже не от вас, а от сервера, поэтому стоит создать пару rsa ключей на сервере и добавить их в deployment keys в настройках репозитария.
+#set :repository,  "https://github.com/maksim844/sozvezdie.git"
 
 set :branch, "master" # Ветка из которой будем тянуть код для деплоя.
 set :deploy_via, :remote_cache # Указание на то, что стоит хранить кеш репозитария локально и с каждым деплоем лишь подтягивать произведенные изменения. Очень актуально для больших и тяжелых репозитариев.
@@ -74,7 +74,14 @@ namespace :deploy do
     end
   end
   namespace :assets do
-
+    task :precompile, :roles => :web, :except => { :no_release => true } do
+      from = source.next_revision(current_revision)
+      if capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ lib/assets | wc -l").to_i > 0
+        run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
+      else
+        logger.info "Skipping asset pre-compilation because there were no asset changes"
+      end
+    end
 
     task :clean, :roles => :web, :except => { :no_release => true } do
       run "cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:clean"
