@@ -1,0 +1,2 @@
+<%= collection_select(:node, :news, Node.where("content_producer = 'PhotoRep'"), :id, :concat_name,
+                        {:include_blank => true}) %>

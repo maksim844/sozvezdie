@@ -30,7 +30,14 @@ RailsAdmin.config do |config|
   end
 
   config.model Article do
-    field :node
+    field :node do
+      associated_collection_scope do
+        Proc.new { |scope|
+          scope = scope.where("content_producer = 'Stat'")
+        }
+        partial :node_articles_partial
+      end
+    end
     field :name
     field :date#, :rich_picker
     field :anons, :rich_editor
@@ -38,7 +45,14 @@ RailsAdmin.config do |config|
     field :image
   end
   config.model Album do
-    field :node
+    field :node do
+      associated_collection_scope do
+        Proc.new { |scope|
+          scope = scope.where("content_producer = 'PhotoRep'")
+        }
+        partial :node_albums_partial
+      end
+      end
     field :name
     field :photo#, :rich_picker
     field :photos#, :rich_picker
@@ -85,7 +99,14 @@ RailsAdmin.config do |config|
   end
 
   config.model Teacher do
-    field :node
+    field :node do
+      associated_collection_scope do
+        Proc.new { |scope|
+          scope = scope.where("content_producer = 'Teachers'")
+        }
+        partial :node_teachers_partial
+      end
+    end
     field :name
     field :post
     field :anons, :rich_editor
@@ -120,9 +141,9 @@ RailsAdmin.config do |config|
       field :node do
         associated_collection_scope do
           Proc.new { |scope|
-            scope = scope.where("name = 'Новости'")
+            scope = scope.where("content_producer = 'News'")
           }
-          partial :node_partial
+          partial :node_news_partial
         end
 
       end

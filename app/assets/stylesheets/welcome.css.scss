@@ -96,3 +96,8 @@
 .leftmenu .academy {
   display: none;
 }
+
+.leftmenu ul li a:hover, .leftmenu ul li a.active, ul.leftmenu2 li a:hover, ul.leftmenu2 li a.active {
+  text-decoration: none;
+  color: #000;
+}
