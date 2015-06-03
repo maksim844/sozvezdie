@@ -1,4 +1,4 @@
-require 'dragonfly/rails/images'
+#require 'dragonfly/rails/images'
 
 RailsAdmin.config do |c|
   c.excluded_models = [RelTest]
@@ -51,7 +51,6 @@ RailsAdmin.config do |config|
         Proc.new { |scope|
           scope = scope.where("content_producer = 'PhotoRep'")
         }
-        partial :node_albums_partial
       end
       end
     field :name
@@ -105,7 +104,6 @@ RailsAdmin.config do |config|
         Proc.new { |scope|
           scope = scope.where("content_producer = 'Teachers'")
         }
-        partial :node_teachers_partial
       end
     end
     field :name
@@ -144,7 +142,6 @@ RailsAdmin.config do |config|
           Proc.new { |scope|
             scope = scope.where("content_producer = 'News'")
           }
-          partial :node_news_partial
         end
 
       end

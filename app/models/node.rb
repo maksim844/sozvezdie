@@ -9,6 +9,16 @@ class Node < ActiveRecord::Base
 
   #default_scope where("in_site_map = 1 or content_producer like '%Main%'")
 
+  def name
+    "#{c_name(self.id)}  #{ c_section(self.ancestry)}"
+  end
 
+  def c_name(id)
+    Node.where(id: id).to_a.first()["name"]
+  end
+
+  def c_section(id)
+    Node.where(id: id).to_a.first()["name"]
+  end
 
 end

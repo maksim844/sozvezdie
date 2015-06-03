@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 gem 'therubyracer'
 
 gem 'rails', '~> 3.1'
-gem 'actionmailer'
 gem 'cancan'
 gem 'devise', '~> 1.4'
 gem 'rails_admin'
