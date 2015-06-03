@@ -9,7 +9,6 @@ class Node < ActiveRecord::Base
 
   #default_scope where("in_site_map = 1 or content_producer like '%Main%'")
 
-  def concat_name
-    "#{name} #{Node.find(ancestry).name}"
-  end
+
+
 end

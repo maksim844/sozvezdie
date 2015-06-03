@@ -9,6 +9,7 @@ RailsAdmin.config do |c|
 end
 
 RailsAdmin.config do |config|
+  config.main_app_name = ['Sozvezdie Ieml', 'Admin']
   config.included_models = ['News', 'Section', 'Node', 'Teacher', 'Setting', 'Album', 'Photo', 'Article', 'Photomain']
   config.actions do
     # root actions
@@ -35,7 +36,7 @@ RailsAdmin.config do |config|
         Proc.new { |scope|
           scope = scope.where("content_producer = 'Stat'")
         }
-        partial :node_articles_partial
+        #partial :node_articles_partial
       end
     end
     field :name

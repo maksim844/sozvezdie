@@ -11,5 +11,8 @@ class Article < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   default_scope order('id desc')
+  def node
+    self.node.name
+  end
 
 end
