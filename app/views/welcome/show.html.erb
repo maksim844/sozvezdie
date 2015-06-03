@@ -14,7 +14,7 @@
     <% @news.each do |n| %>
         <div class="news">
           <p class="date"><%= n.date.strftime("%d.%m.%Y")%></p>
-          <h4><%= link_to n.name, news_path(n.id) %></h4>
+          <h4><%= link_to n.name, news_show_path(params[:section], n.id) %></h4>
           <%= n.anons.html_safe %>
         </div>
     <% end %>
