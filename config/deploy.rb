@@ -73,6 +73,7 @@ namespace :deploy do
       run %Q{cd #{current_release} && bundle install}
     end
   end
+
   namespace :assets do
     task :precompile, :roles => :web, :except => { :no_release => true } do
       from = source.next_revision(current_revision)
