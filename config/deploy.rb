@@ -33,6 +33,7 @@ set :repository,  "https://github.com/maksim844/sozvezdie.git"
 
 set :branch, "master" # Ветка из которой будем тянуть код для деплоя.
 set :deploy_via, :remote_cache # Указание на то, что стоит хранить кеш репозитария локально и с каждым деплоем лишь подтягивать произведенные изменения. Очень актуально для больших и тяжелых репозитариев.
+set :keep_releases, 5
 
 role :web, domain
 role :app, domain

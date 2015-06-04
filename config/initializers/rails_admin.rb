@@ -29,8 +29,13 @@ RailsAdmin.config do |config|
 
     nestable
   end
-
+  config.navigation_static_label = "Управление меню"
+  config.navigation_static_links = {
+      'Расположение меню' => '/admin/node/nestable'
+  }
   config.model Article do
+    navigation_label "Контент сайта"
+
     field :node do
       associated_collection_scope do
         Proc.new { |scope|
@@ -46,6 +51,8 @@ RailsAdmin.config do |config|
     field :image
   end
   config.model Album do
+    navigation_label "Албомы и фотографии"
+
     field :node do
       associated_collection_scope do
         Proc.new { |scope|
@@ -58,18 +65,21 @@ RailsAdmin.config do |config|
     field :photos#, :rich_picker
   end
   config.model Photo do
+    navigation_label "Албомы и фотографии"
     field :album
     field :name
     field :photo#, :rich_picker
     field :comment
   end
   config.model Photomain do
+    navigation_label "Албомы и фотографии"
     field :setting
     field :name
     field :image#, :rich_picker
   end
 
   config.model Section do
+    navigation_label "Разделы сайта"
     field :title
 
     field :image
@@ -81,6 +91,7 @@ RailsAdmin.config do |config|
   end
 
   config.model Setting do
+    parent Section
     field :id do
       read_only false
     end
@@ -99,6 +110,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Teacher do
+    navigation_label "Контент сайта"
+
     field :node do
       associated_collection_scope do
         Proc.new { |scope|
@@ -114,6 +127,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Node do
+    navigation_label "Контент сайта"
+
     nestable_tree({
                       position_field: :position,
                       max_depth: 6
@@ -137,7 +152,9 @@ RailsAdmin.config do |config|
 
   end
   config.model News do
-      field :node do
+    navigation_label "Контент сайта"
+
+    field :node do
         associated_collection_scope do
           Proc.new { |scope|
             scope = scope.where("content_producer = 'News'")
