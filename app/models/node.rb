@@ -1,4 +1,6 @@
 class Node < ActiveRecord::Base
+  include Rails.application.routes.url_helpers
+
   has_ancestry
 
   has_many :teachers
@@ -9,9 +11,12 @@ class Node < ActiveRecord::Base
 
   #default_scope where("in_site_map = 1 or content_producer like '%Main%'")
 
- # def name
- #   "#{c_name(self.id)}  #{ c_section(self.ancestry)}"
-  #end
+  def name
+    "#{c_name(self.id)} | #{ c_section(self.ancestry)}"
+  end
+  def name2
+    c_name(self.id)
+  end
 
   def c_name(id)
     Node.where(id: id).to_a.first()["name"]

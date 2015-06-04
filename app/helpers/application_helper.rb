@@ -18,10 +18,10 @@ module ApplicationHelper
     result = ''
     left_menu.each do |m|
       if url_check_class?(m.url) || url_child_class?(m.url)
-        result += content_tag(:li, '<span class="bo"><span class="bl"></span><span class="bm"></span><span class="br"></span>'.html_safe + link_to(m.name, node_path(m.url), class: :active))
+        result += content_tag(:li, '<span class="bo"><span class="bl"></span><span class="bm"></span><span class="br"></span>'.html_safe + link_to(m.name2, node_path(m.url), class: :active))
       else
         url = m.the_link_to.empty? ? m.url : m.the_link_to
-        result += content_tag(:li, link_to(m.name, get_path_by_url(url, section)))
+        result += content_tag(:li, link_to(m.name2, get_path_by_url(url, section)))
       end
 
       sub_nodes = Node.where("in_site_map = 1 and ancestry like '%#{m.id}'")
