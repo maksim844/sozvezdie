@@ -23,6 +23,7 @@ group :development, :test do
   gem "capistrano"
   gem "rvm-capistrano"
   gem 'rspec-rails', '~> 2.8.0'
+  gem 'devise-bootstrap-views'
 end
 group :assets do
   gem 'coffee-rails', '~> 3.1'
@@ -32,4 +33,3 @@ end
 gem 'rich'
 gem 'paperclip', '~> 2.4'
 gem 'russian', '~> 0.6.0'
-gem 'devise-bootstrap-views'

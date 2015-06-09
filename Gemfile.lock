@@ -68,7 +68,6 @@ GEM
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
       warden (~> 1.1)
-    devise-bootstrap-views (0.0.5)
     diff-lcs (1.1.3)
     dragonfly (1.0.10)
       addressable (~> 2.3)
@@ -255,7 +254,6 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 3.1)
   devise (~> 1.4)
-  devise-bootstrap-views
   dragonfly
   mini_magick
   mlb (~> 0.5)
