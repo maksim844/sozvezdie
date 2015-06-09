@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+  <title>Панель администратора </title>
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link href="http://sozvezdie.ieml.ru/favicon.ico" rel="shortcut icon">
+  <%= stylesheet_link_tag :bootstrap, :media => 'all'  %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+    <div id="wrap">
+        <%= yield %>
+    </div>
+</body>
+</html>

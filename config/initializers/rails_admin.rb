@@ -1,16 +1,17 @@
 #require 'dragonfly/rails/images'
 
-RailsAdmin.config do |c|
-  c.excluded_models = [RelTest]
-  c.authenticate_with {}
-  c.current_user_method { current_user }
-  c.authorize_with :cancan
-  c.audit_with :history, User
-end
-
 RailsAdmin.config do |config|
+  config.excluded_models = [RelTest]
+  #config.authenticate_with {}
+  #config.current_user_method { current_user }
+  config.authorize_with :cancan
+  config.audit_with :history, User
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
   config.main_app_name = ['Sozvezdie Ieml', 'Admin']
-  config.included_models = ['News', 'Section', 'Node', 'Teacher', 'Setting', 'Album', 'Photo', 'Article', 'Photomain']
+  config.included_models = ['News', 'Section', 'Node', 'Teacher', 'Setting', 'Album', 'Photo', 'Article', 'Photomain', 'User']
   config.actions do
     # root actions
     dashboard                     # mandatory
@@ -33,6 +34,14 @@ RailsAdmin.config do |config|
   config.navigation_static_links = {
       'Расположение меню' => '/admin/node/nestable'
   }
+  config.model User do
+    field :email
+    field :password
+    field :password_confirmation
+    field :avatar
+    field :is_admin
+    field :roles
+  end
   config.model Article do
     navigation_label "Контент сайта"
 

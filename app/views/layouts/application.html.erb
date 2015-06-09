@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
+  <% params[:section] = "academy" if  params[:section].nil? %>
+
   <title>Созвездие | <%= section_name(params[:section])%></title>
   <link rel="shortcut icon" href="/assets/favicon.ico">
   <link href="http://sozvezdie.ieml.ru/favicon.ico" rel="shortcut icon">

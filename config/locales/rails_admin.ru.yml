@@ -17,7 +17,14 @@ ru:
       photo: 'Фотографии'
       article: 'Статьи'
       photomain: 'Фото на главной'
+      user: Администраторы
+
     attributes:
+      user:
+        password: Пароль
+        password_confirmation: Повторить пароль
+        is_admin: Администратор?
+        roles: Роли
       section:
         title: "Название"
         created_at: 'Создано'

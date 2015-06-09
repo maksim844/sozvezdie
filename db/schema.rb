@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150524161504) do
+ActiveRecord::Schema.define(:version => 20150604201712) do
 
   create_table "_answer", :primary_key => "__DocID", :force => true do |t|
     t.integer "__ParentDocID",                 :null => false
@@ -997,7 +997,7 @@ ActiveRecord::Schema.define(:version => 20150524161504) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "main", :force => true do |t|
+  create_table "news", :force => true do |t|
     t.integer  "node_id"
     t.string   "name"
     t.date     "date"
@@ -1009,8 +1009,8 @@ ActiveRecord::Schema.define(:version => 20150524161504) do
     t.datetime "image_updated_at"
   end
 
-  add_index "main", ["id"], :name => "idx___DocID"
-  add_index "main", ["node_id"], :name => "idx___ParentDocID"
+  add_index "news", ["id"], :name => "idx___DocID"
+  add_index "news", ["node_id"], :name => "idx___ParentDocID"
 
   create_table "nodes", :force => true do |t|
     t.integer "node_id",                       :default => 0,  :null => false
@@ -1033,7 +1033,6 @@ ActiveRecord::Schema.define(:version => 20150524161504) do
   create_table "photomains", :force => true do |t|
     t.integer  "setting_id",                         :null => false
     t.string   "name",               :default => ""
-    t.string   "photo"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -1223,6 +1222,7 @@ ActiveRecord::Schema.define(:version => 20150524161504) do
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.string   "roles"
+    t.boolean  "is_admin"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

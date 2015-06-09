@@ -32,3 +32,4 @@ end
 gem 'rich'
 gem 'paperclip', '~> 2.4'
 gem 'russian', '~> 0.6.0'
+gem 'devise-bootstrap-views'
