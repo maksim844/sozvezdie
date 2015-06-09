@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150604201712) do
+ActiveRecord::Schema.define(:version => 20150609114102) do
 
   create_table "_answer", :primary_key => "__DocID", :force => true do |t|
     t.integer "__ParentDocID",                 :null => false
